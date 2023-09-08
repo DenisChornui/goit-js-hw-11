@@ -76,7 +76,7 @@ function handlerClickMore() {
 
   fetchPhotos(params)
   .then(photos => {
-    if(numberPage-1 > photosHits / 39) {
+    if(numberPage-1 > photos.hits / 39) {
         loadMoreBtn.setAttribute("hidden", "true")
         return message.removeAttribute("hidden")
     }
